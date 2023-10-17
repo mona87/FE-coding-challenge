@@ -11,10 +11,10 @@ const MovieCard = () => {
 
     // map through the movies data and show the image and title for each movie
     return <section style={movieStyle}>
-        {selectedGenre?.map((obj) => {
-            return <div key={obj.id} style={movieItem}>
-                <img alt={obj.title} style={imgStyle} src={obj.posterUrl} onError={checkImageURL} />
-                <div style={titleStyle}>{obj.title}</div>
+        {selectedGenre?.map((movie) => {
+            return <div key={movie.id} style={movieItem}>
+                <img alt={movie.title} style={imgStyle} src={movie.posterUrl} onError={checkImageURL} />
+                <div style={titleStyle}>{movie.title}</div>
             </div>
         })}
     </section>
