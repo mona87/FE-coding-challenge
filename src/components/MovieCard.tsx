@@ -1,7 +1,7 @@
 import { useMovieDataContext } from "../context"
 
 const MovieCard = () => {
-    const {selectedGenre } = useMovieDataContext()
+    const { selectedGenre } = useMovieDataContext()
 
     const checkImageURL = (e: React.MouseEvent<HTMLImageElement>) => {
         //if an image has an error replace the img src with the no-image.png

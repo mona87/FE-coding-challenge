@@ -11,12 +11,12 @@ const MovieContainer = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            try{
+            try {
                 //get movie data from json 
                 const res = await fetch('./movies.json')
                 const data = await res.json();
 
-                //throw error is response fails
+                //throw error if response fails
                 if (!res.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -25,7 +25,7 @@ const MovieContainer = () => {
                 setGenreData(data.genres)
                 setSelectedGenre(data.movies);
             }
-            catch(error){
+            catch (error) {
                 //show error message in console if fetch fails
                 console.log(`error occurred:${error}`)
             }
@@ -33,7 +33,7 @@ const MovieContainer = () => {
         fetchData();
     }, [])
 
-    //pass genre and movies data to context to be available for other components
+    //pass genre and movie data to context to be available for other components
     return <MovieDataContext.Provider value={{ genres, movies, selectedGenre, setSelectedGenre }}>
         <main style={containerStyle} >
             <SideBar />
