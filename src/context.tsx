@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
 
 export type MovieDataInterface = {
-    genres: string[] | undefined,
+    genres: string[] | [],
     movies: {
         id: number;
         title: string;
@@ -12,24 +12,29 @@ export type MovieDataInterface = {
         actors: string;
         plot: string;
         posterUrl: string;
-    }[] | undefined
+    }[] | [];
+    selectedGenre: MovieDataInterface['movies'] | [];
+    setSelectedGenre: (m: MovieDataInterface['movies']) => void;
 }
 
+//create context with MovieDataInterface
 export const MovieDataContext = createContext<MovieDataInterface>({
     genres: [],
     movies: [
         {
-        id: 0,
-        title: '',
-        year: 'string',
-        runtime: 'string',
-        genres: [],
-        director: '',
-        actors: '',
-        plot: '',
-        posterUrl: '',
-    }
-]
-  });
-  
-  export const useMovieDataContext = () => useContext(MovieDataContext);
+            id: 0,
+            title: '',
+            year: 'string',
+            runtime: 'string',
+            genres: [],
+            director: '',
+            actors: '',
+            plot: '',
+            posterUrl: '',
+        }
+    ],
+    selectedGenre: [],
+    setSelectedGenre: () => {}
+});
+
+export const useMovieDataContext = () => useContext(MovieDataContext);

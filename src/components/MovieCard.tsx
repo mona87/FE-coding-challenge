@@ -1,16 +1,17 @@
 import { useMovieDataContext } from "../context"
 
 const MovieCard = () => {
-    const { movies } = useMovieDataContext()
+    const {selectedGenre } = useMovieDataContext()
 
-    const checkImageURL = (e: any) => {
+    const checkImageURL = (e: React.MouseEvent<HTMLImageElement>) => {
         //if an image has an error replace the img src with the no-image.png
-        e.target.src = './no-image.png'
+        const target = e.target as HTMLImageElement;
+        target.src = './no-image.png'
     }
 
     // map through the movies data and show the image and title for each movie
     return <section style={movieStyle}>
-        {movies?.map((obj, i) => {
+        {selectedGenre?.map((obj) => {
             return <div key={obj.id} style={movieItem}>
                 <img alt={obj.title} style={imgStyle} src={obj.posterUrl} onError={checkImageURL} />
                 <div style={titleStyle}>{obj.title}</div>
