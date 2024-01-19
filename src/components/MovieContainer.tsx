@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { MovieDataContext, MovieDataInterface } from "../context";
-import SideBar from "./SideBar";
+import Filter from "./Filter";
 import MovieCard from "./MovieCard";
 
 const MovieContainer = () => {
@@ -36,7 +36,7 @@ const MovieContainer = () => {
     //pass genre and movie data to context to be available for other components
     return <MovieDataContext.Provider value={{ genres, movies, selectedGenre, setSelectedGenre }}>
         <main style={containerStyle} >
-            <SideBar />
+            <Filter />
             <MovieCard />
         </main>
     </MovieDataContext.Provider>
@@ -45,7 +45,8 @@ const MovieContainer = () => {
 //styling for grid container
 const containerStyle = {
     display: 'grid',
-    gridTemplateColumns: '1fr 3fr',
+    gridTemplateRows: '100px 1fr',
+   
 }
 
 export default MovieContainer;

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="dither sq.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 600 600"
+   height="600"
+   width="600">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient7614">
+      <stop
+         style="stop-color:#c73536;stop-opacity:1"
+         offset="0"
+         id="stop7610" />
+      <stop
+         style="stop-color:#270b0a;stop-opacity:1"
+         offset="1"
+         id="stop7612" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7614"
+       id="linearGradient7616"
+       x1="600"
+       y1="452.4246520996094"
+       x2="0"
+       y2="1052.424682617188"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter7618"
+       inkscape:label="dithering">
+      <feTurbulence
+         id="feTurbulence7620"
+         type="fractalNoise"
+         baseFrequency="1"
+         numOctaves="10"
+         result="result2" />
+      <feTurbulence
+         numOctaves="10"
+         baseFrequency="1"
+         type="fractalNoise"
+         id="feTurbulence7624"
+         result="result1" />
+      <feDisplacementMap
+         in2="result1"
+         id="feDisplacementMap7626"
+         in="result2"
+         xChannelSelector="R"
+         yChannelSelector="G"
+         scale="64.780763790664793"
+         result="result3" />
+      <feDisplacementMap
+         in2="result3"
+         id="feDisplacementMap7628"
+         in="SourceGraphic"
+         xChannelSelector="B"
+         scale="34.700000000000003"
+         result="result4" />
+      <feComposite
+         in2="SourceGraphic"
+         id="feComposite7630"
+         result="result5" />
+      <feComposite
+         in2="SourceGraphic"
+         id="feComposite7632"
+         operator="in" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     inkscape:snap-smooth-nodes="true"
+     inkscape:guide-bbox="true"
+     showguides="false"
+     inkscape:snap-global="true"
+     inkscape:pagecheckerboard="true"
+     guidehiopacity="1"
+     guidehicolor="#f000ff"
+     guideopacity="1"
+     guidecolor="#00ffe4"
+     inkscape:showpageshadow="false"
+     borderlayer="true"
+     units="px"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:window-height="705"
+     inkscape:window-width="1366"
+     showgrid="false"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     inkscape:cy="300.0000000000001"
+     inkscape:cx="300"
+     inkscape:zoom="0.9116666666666666"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.7450980392"
+     borderopacity="1"
+     bordercolor="#ffffff"
+     pagecolor="#003af6"
+     id="base" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <dc:date>2018</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Lazur URH</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-452.4246479985031)">
+    <path
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:url(#linearGradient7616);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker:none;paint-order:markers stroke fill;filter:url(#filter7618);color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       d="m -100,352.4246479985031 h 800 v 799.9999999999997 h -800 z"
+       id="rect3964"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+  </g>
+</svg>
